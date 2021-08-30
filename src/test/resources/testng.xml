@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Test" verbose="4" parallel="tests" thread-count="3">
+
+	<test name="Amazon Test">
+	    <parameter name="browser"  value="chrome" />
+	    <parameter name="url"      value="http://www.amazon.in/" />
+		<classes>
+			<class name="testNGsessions.AmazonTest" />
+		</classes>
+	</test>
+	
+
+	<test name="Google Test">
+	<parameter name="browser"  value="chrome" /> 
+	<parameter name="url"      value="http://www.google.com" />
+		<classes>
+			<class name="testNGsessions.GoogleTest" />
+		</classes>
+	</test>
+	
+
+	<test name="Rediff Mail Test">
+	<parameter name="browser"  value="chrome" />
+	<parameter name="url"      value="https://mail.rediff.com/cgi-bin/login.cgi" />
+		<classes>
+			<class name="testNGsessions.RediffMailTest" />
+		</classes>
+	</test>
+
+
+</suite>
